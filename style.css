@@ -1,0 +1,264 @@
+:root {
+  --ivory: #f6f1e6;
+  --forest: #1e3a2b;
+  --forest-deep: #16291f;
+  --leaf: #5c7a5f;
+  --gold: #b08d4f;
+  --charcoal: #2a2620;
+  --rose: #b5715c;
+  --line: rgba(30, 58, 43, 0.18);
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 0 2.5rem;
+}
+
+.eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--leaf);
+  margin: 0 0 0.5rem;
+}
+
+.monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(3.5rem, 14vw, 5.5rem);
+  color: var(--forest);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.monogram span {
+  color: var(--gold);
+  font-style: italic;
+  font-size: 0.6em;
+  padding: 0 0.15em;
+  position: relative;
+  top: -0.08em;
+}
+
+.names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.names .amp {
+  font-style: italic;
+  color: var(--leaf);
+}
+
+.event-line {
+  font-size: 0.95rem;
+  color: var(--leaf);
+  margin: 0;
+}
+
+.event-line .editable {
+  border-bottom: 1px dashed var(--line);
+}
+
+.sprig {
+  position: absolute;
+  top: -1.5rem;
+  width: 60px;
+  opacity: 0.9;
+}
+.sprig svg { width: 100%; height: auto; }
+.sprig-left { left: -0.5rem; }
+.sprig-right { right: -0.5rem; }
+
+@media (max-width: 480px) {
+  .sprig { width: 38px; top: -0.5rem; }
+  .hero { padding: 0 1.2rem; }
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem auto;
+  max-width: 320px;
+}
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.divider-mark {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+/* ---------- RSVP form ---------- */
+
+.rsvp { text-align: center; }
+
+.rsvp h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.rsvp-sub {
+  color: var(--charcoal);
+  opacity: 0.75;
+  max-width: 42ch;
+  margin: 0 auto 2.25rem;
+  font-size: 0.95rem;
+}
+
+form { text-align: left; }
+
+.field {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.field label,
+fieldset.field legend {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--forest);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+#guest-name {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fffdf9;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--charcoal);
+}
+
+#guest-name:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  border-color: var(--gold);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: #fffdf9;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.option:has(input:checked) {
+  border-color: var(--forest);
+  background: rgba(30, 58, 43, 0.05);
+}
+
+.option input {
+  accent-color: var(--forest);
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.option input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.option span { font-size: 0.98rem; }
+
+button#submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--forest);
+  color: var(--ivory);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button#submit-btn:hover { background: var(--forest-deep); }
+button#submit-btn:active { transform: scale(0.98); }
+button#submit-btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+button#submit-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.form-status.success { color: var(--forest); }
+.form-status.error { color: var(--rose); }
+
+/* ---------- Footer ---------- */
+
+.page-footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.page-footer p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--leaf);
+  font-size: 1.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}

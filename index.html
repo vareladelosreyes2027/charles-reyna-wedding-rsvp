@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charles &amp; Reynaleigh — RSVP</title>
+<meta name="description" content="RSVP for the wedding of Charles Emmanuel Varela and Reynaleigh De Los Reyes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+
+    <section class="hero">
+      <div class="sprig sprig-left" aria-hidden="true">
+        <svg viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 190 C 70 150, 60 110, 65 60" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M65 150 C 45 145, 30 130, 25 110" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M70 115 C 50 108, 38 92, 34 74" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M68 78 C 52 70, 44 56, 42 42" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M65 60 C 58 48, 52 38, 55 24" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">Together with their families</p>
+
+      <h1 class="monogram">C <span>&amp;</span> R</h1>
+
+      <p class="names">Charles Emmanuel Varela<br class="mobile-break"> <span class="amp">and</span> Reynaleigh De Los Reyes</p>
+
+      <p class="event-line">are getting married — <span class="editable">edit this date &amp; venue line in index.html</span></p>
+
+      <div class="sprig sprig-right" aria-hidden="true">
+        <svg viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 190 C 50 150, 60 110, 55 60" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M55 150 C 75 145, 90 130, 95 110" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M50 115 C 70 108, 82 92, 86 74" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M52 78 C 68 70, 76 56, 78 42" stroke="var(--leaf)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M55 60 C 62 48, 68 38, 65 24" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-mark">&#10087;</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <section class="rsvp" id="rsvp">
+      <h2>Will you be able to join us?</h2>
+      <p class="rsvp-sub">Let us know below. If your plans change, come back and submit again — we'll keep your most recent answer.</p>
+
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="guest-name">Your full name</label>
+          <input type="text" id="guest-name" name="name" autocomplete="name" placeholder="e.g. Maria Santos" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Your availability</legend>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="availability" value="Joyfully attending" required>
+              <span>Joyfully attending</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="availability" value="Not sure yet">
+              <span>Not sure yet</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="availability" value="Unable to attend">
+              <span>Unable to attend</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="submit-btn">
+          <span class="btn-label">Send RSVP</span>
+        </button>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="page-footer">
+      <p>With love, Charles &amp; Reynaleigh</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
